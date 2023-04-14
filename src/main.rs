@@ -1,10 +1,13 @@
-use crate::config::config::ExampleConfig;
+use crate::config::ExampleConfig;
 use ::config::Config;
 use actix_web::{web, App, HttpServer};
 use dotenv::dotenv;
 use tokio_postgres::NoTls;
 
 pub mod config;
+pub mod db;
+pub mod errors;
+pub mod handlers;
 pub mod models;
 
 #[actix_web::main]
